@@ -1,0 +1,69 @@
+NcR Basic 
+Given two numbers N and R, find the value of NCR.
+
+
+
+Input Format
+
+The first and only line of input contains integers N and R.
+
+
+
+Output Format
+
+Print the value of NCR
+
+
+
+Constraints
+
+1 <= N <= 10
+
+1 <= R <= 10
+
+
+
+Example
+
+Input
+
+5 3
+
+
+
+Output
+
+10
+
+
+
+Explanation
+
+
+
+Self Explanatory
+
+
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        int n=scan.nextInt();
+        int r=scan.nextInt();
+        System.out.println(fact(n)/(fact(r)*fact(n-r)));
+    }
+    public static long fact(int n)
+    {
+        long f=1;
+        while(n>0)
+        {
+            f*=n;
+            n--;
+        }
+        return f;
+    }
+}
