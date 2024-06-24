@@ -1,0 +1,60 @@
+Number Reverse 
+Given a number N, reverse the number.
+
+
+
+Input Format
+
+The first and only line of input contains a integer - N.
+
+
+
+Output Format
+
+Print the reversed number.
+
+
+
+Constraints
+
+-1018 <= N <= 1018
+
+
+
+Example
+
+Input
+
+1344
+
+
+
+Output
+
+4431
+
+
+
+Explanation
+
+
+
+Self Explanatory
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    long long num,rem,rev=0;
+    scanf("%lld",&num);
+    while(num!=0)
+    {
+        rem=num%10;
+        rev=rev*10+rem;
+        num=num/10;
+    }
+    printf("%lld",rev);
+    return 0;
+}
