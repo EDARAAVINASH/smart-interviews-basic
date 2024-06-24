@@ -1,0 +1,76 @@
+Armstrong Number 
+Given an integer N, check whether it's an Armstrong number or not.
+
+Note that an Armstrong number is a number that is equal to the sum of cubes of its digits.
+
+
+
+Input Format
+
+The first and only line of input contains an integer - N.
+
+
+
+Output Format
+
+Print "Yes" if the number is Armstrong number, "No" otherwise.
+
+
+
+Constraints
+
+0 <= N <= 109
+
+
+
+Example
+
+Input
+
+153
+
+
+
+Output
+
+Yes
+
+
+
+Explanation
+
+
+
+13 + 53 + 33 = 153
+
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        long n=scan.nextInt();
+        long temp=n,temp1=n,sum=0,count=0;
+        while(temp>0)
+        {
+            count++;
+            temp/=10;
+        }
+        while(temp1>0)
+        {
+            long a=temp1%10;
+            sum=sum+(long)Math.pow(a,count);
+            temp1/=10;
+        }
+        if(n==sum)
+        {
+            System.out.println("Yes");
+        }
+        else
+        {
+            System.out.println("No");
+        }
+    }
+}
